@@ -1,0 +1,94 @@
+/**app.wxss**/
+page {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #F0F0F0;
+}
+.container {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+} 
+
+/* 搜索框样式 */
+.search {
+  background: #0C5355;
+  display: grid;
+  grid-template-columns: 50rpx auto 80rpx;
+  align-items: center;
+}
+.search input {
+  color: white;
+}
+.search .btn-search {
+  font-size: 36rpx;
+  font-weight: bolder;
+  color: #17BA11;
+}
+
+
+/* 技能列表模板样式 */
+.custom-pane {
+  width: 100%;
+  height: auto;
+  background: white;
+  border-radius: 5px;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 15rpx;
+}
+.custom-pane .pane-title {
+  width: 100%;
+  height: 70rpx;
+  border-bottom: 2rpx solid #F5F5F5;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10rpx;
+}
+.custom-pane .main-title {
+  font-size: 30rpx;
+  font-weight: 400;
+}
+.custom-pane .sub-title {
+  font-size: 20rpx;
+  align-self: flex-end;
+  margin-left: .5em;
+  color: #5E5E5E;
+}
+.custom-pane .pane-content {
+  width: 100%;
+  height: fit-content;
+  padding: 15rpx 0;
+}
+.custom-pane .tags-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.custom-pane .tag {
+  width: fit-content;
+  padding:5rpx 10rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  background: rgba(134,151,218,.6);
+  border-radius: 10%;
+  margin:5rpx 10rpx;
+}
+.custom-pane .top-tag {
+  font-size: 20rpx;
+  padding: 0;
+  background-color: #FDDAD9;
+  color: #DC3A30;
+}
+.custom-pane .disc-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.custom-pane .disc {
+  margin: 0 10rpx;
+  font-size: 22rpx;
+  color: #B5B8C2;
+}

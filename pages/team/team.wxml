@@ -1,0 +1,27 @@
+<!--pages/team/team.wxml-->
+<view class="container">
+  <view class="team-pane" wx:for="{{test}}" wx:key="index">
+  <!-- 标题 -->
+    <view class="team-top">
+      <view class="team-lv">{{item.class}}</view>
+      <view class="team-title">{{item.name}}</view>
+      <view class="team-disc">{{item.disc}}</view>
+      <view class="team-detail">详情></view>
+    </view>
+    <!-- 图片标签 -->
+    <view class="content">
+      <view class="img-box">
+        <image src="{{item.picPath}}" mode="aspectFill"></image>
+      </view>
+      <view class="tags">
+        <text class="tag" wx:for="{{item.tags}}" wx:key="index">{{item}}</text>
+      </view>
+    </view>
+    <!-- 底部标签 -->
+    <view class="footer">
+      <text class="footer-disc">职业：{{item.occupation}}</text>
+      <text class="footer-disc">定位：{{item.position}}</text>
+      <text class="footer-disc">成型难度：{{item.difficulty}}</text>
+    </view>
+  </view>
+</view>

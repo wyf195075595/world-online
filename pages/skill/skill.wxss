@@ -1,0 +1,85 @@
+/* pages/skill/skill.wxss */
+.container {
+  height: 100%;
+  width: 100%;
+}
+.top {
+  height: 110rpx;
+}
+
+.bottom {
+  height: calc(100% - 110rpx);
+  display: grid;
+  grid-template-columns: 120rpx auto;
+  grid-template-rows: 80rpx auto;
+  grid-template-areas: 'a b'
+                      'a c';
+}
+.occupation-type-box {
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid white;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+/* 技能类型列表 */
+.skill-type-box {
+  grid-area: b;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #8A8889;
+}
+.skill-type-item {
+  font-size: 30rpx;
+  font-weight: 400;
+  color: #8A8889;
+  position: relative;
+}
+.skill-type-item:not(:last-child):after {
+  content: '';
+  width: 0;
+  height: 60%;
+  border: 1rpx solid #888888;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  transform: translateX(40rpx) rotate(20deg) ;
+}
+.skill-type-item-active {
+  color: black;
+  font-weight: bold;
+}
+.list-box {
+  overflow: hidden;
+  overflow-y: scroll;
+  grid-area: c;
+  box-sizing: border-box;
+  padding:0 15rpx;
+}
+/* 角色列表样式 */
+.occupation-item {
+  font-size: 30rpx;
+  font-weight: 400;
+  line-height: 2em;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  color: #8A8889;
+}
+.occupation-item-active {
+  color: black;
+  font-weight: bold;
+}
+.occupation-item-active::before {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  border-right: 6rpx solid red;
+  position: absolute;
+  right: 0;
+}

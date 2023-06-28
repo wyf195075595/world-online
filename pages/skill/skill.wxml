@@ -1,0 +1,30 @@
+<!--pages/skill/skill.wxml-->
+<import src="/utils/template.wxml"></import>
+
+<view class="container" >
+  <view class="top search">
+    <icon type="search"></icon>
+    <input maxlength="20" bindinput="setInputValue" value="{{inputVal}}" placeholder="搜索：狂风快剑" />
+    <text class="btn-search" catchtap="search">搜索</text>
+  </view>
+  <view class="bottom">
+  <!-- 角色类型 -->
+    <view class="occupation-type-box">
+      <block wx:for="{{occupationList}}" wx:key="index">
+        <text class="occupation-item {{occupationIndex==(index+1)?'occupation-item-active':''}}" data-index="{{index+1}}" catchtap="changActive">{{item.name}}</text>
+      </block>
+    </view>
+  <!-- 技能类型 -->
+    <view class="skill-type-box">
+      <text wx:for="{{skillTypes}}" wx:key="index" class="skill-type-item {{skillType == item.value?'skill-type-item-active':''}}" data-type="{{item.value}}" catchtap="changeSkillType">{{item.name}}</text>
+    </view>
+  <!-- 技能列表 -->
+    <view class="list-box">
+      <scroll-view scroll-y="true" style="height: 100%;">
+        <block wx:for="{{test}}"  wx:key="title">
+          <template is="activeSkill" data="{{...item, index}}"></template>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

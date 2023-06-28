@@ -1,0 +1,85 @@
+/* pages/skillDetail/skillDetail.wxss */
+.container {
+  padding: 20rpx;
+}
+.skill-deatil-pane {
+  width: 100%;
+  height: auto;
+  min-height: 100rpx;
+  background: white;
+  border-radius:15rpx 15rpx 0 0;
+  padding: 15rpx;
+  box-sizing: border-box;
+}
+.skill-deatil-pane .skill-title {
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.skill-deatil-pane .skill-sub-title {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.skill-deatil-pane .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  border-bottom: 2rpx dashed #DBDBDB;
+  padding: 15rpx 0;
+}
+.skill-deatil-pane .tag {
+  width: fit-content;
+  padding:5rpx 10rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  background: rgba(91,190,199,.6);
+  border-radius: 10%;
+  margin:5rpx 10rpx;
+}
+.skill-deatil-pane .tag:nth-child(1),
+.skill-deatil-pane .tag:nth-child(2) {
+  background-color: rgba(134,151,218,.6);
+}
+.skill-deatil-pane .content {
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+}
+.skill-deatil-pane .effect {
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.skill-deatil-pane .disc {
+  font-size: 26rpx;
+}
+.skill-deatil-pane .blue {
+  color: rgba(82,162,66,0.8);
+  font-weight: initial;
+}
+.skill-deatil-pane .green {
+  color: rgba(97,93,189,0.8);
+  font-weight: initial;
+}
+
+/* 模板 */
+.skill-disc-pane {
+  width: 100%;
+  height: auto;
+  min-height: 100rpx;
+  background: white;
+  border-radius:15rpx 15rpx 0 0;
+  padding: 15rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.skill-disc-pane .skill-disc-box {
+  border-bottom: 2rpx dashed #DBDBDB;
+}
+.skill-disc-pane .skill-disc {
+  font-size: 44rpx;
+}
+.skill-disc-pane .content {
+  width: 100%;
+  height: auto;
+  padding: 20rpx 0;
+}

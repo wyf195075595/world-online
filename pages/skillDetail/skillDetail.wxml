@@ -1,0 +1,60 @@
+<!--pages/skillDetail/skillDetail.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" style="height: 100%;">
+    <view class="skill-deatil-pane">
+      <view class="skill-title-box">
+        <text class="skill-title">{{test.name}}</text>
+        <text class="skill-sub-title">22级</text>
+        <text class="skill-sub-title">（技能评分：{{test.score}}分）</text>
+      </view>
+      <view class="skill-tags">
+        <text class="tag" wx:for="{{test.tags}}" wx:key="index" >{{item}}</text>
+      </view>
+      <view class="content">
+        <view class="effect" wx:for="{{test.effects}}" wx:key="index" >
+          效果{{index+1}}：<text class="blue">{{item}}</text>
+        </view>
+        
+        <block wx:if="{{test.skillType != 3}}">
+          <text class="disc">{{test.disc}}</text>
+          <view class="effect" >
+            攻击方式：<text class="green">{{test.attackMode}}</text>
+          </view>
+          <view class="effect">
+            攻击范围：<text class="green">{{test.attackRange}}</text>
+          </view>
+          <view class="effect">
+            武器限制：<text class="green">{{test.armsLimitation}}</text>
+          </view>
+          <view class="disc">▪  本职学满22级需消耗：技能点1265，黄金373，金叶98，铜27500</view>
+          <view class="disc">▪  跨职学满22级需消耗：技能点2350，黄金746，金叶196，铜55000</view>
+        </block>
+        
+      </view>
+    </view>
+    <view class="skill-disc-pane">
+      <view class="skill-disc-box">
+        <text class="skill-disc">附带该技能的装备</text>
+      </view>
+      <view class="content">
+        <text>{{test.equipment}}</text>
+      </view>
+    </view>
+    <view class="skill-disc-pane">
+      <view class="skill-disc-box">
+        <text class="skill-disc">适合该技能的阵容搭配</text>
+      </view>
+      <view class="content">
+        <text>{{test.lineupCollocation}}</text>
+      </view>
+    </view>
+    <view class="skill-disc-pane">
+      <view class="skill-disc-box">
+        <text class="skill-disc">技能大神解析</text>
+      </view>
+      <view class="content">
+        <text>{{test.analysis}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>

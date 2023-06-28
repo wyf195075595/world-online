@@ -1,0 +1,58 @@
+<!--pages/equipment/equipment.wxml-->
+<view class="container">
+  <view class="search ">
+    <icon type="search"></icon>
+    <input maxlength="20" placeholder="搜索：抉择之刃银" />
+    <text class="btn-search">搜索</text>
+  </view>
+  <!-- 下拉框 -->
+  <view class="table-tool">
+    <!-- 类型 -->
+    <picker  range="{{types}}"
+      bindchange="selectChange"
+      data-id="1"
+      range-key="label" value="{{type}}">
+      <view class="weui-select select-option" >{{types[type].label}}</view>
+    </picker>
+    <!-- 等级 -->
+    <picker  range="{{levels}}"
+      bindchange="selectChange"
+      data-id="2"
+      range-key="label" value="{{level}}">
+      <view class="weui-select select-option" >{{levels[level].label}}</view>
+    </picker>
+    <!-- 品质 -->
+    <picker  range="{{qualitys}}"
+      bindchange="selectChange"
+      data-id="3"
+      range-key="label" value="{{quality}}">
+      <view class="weui-select select-option" >{{qualitys[quality].label}}</view>
+    </picker>
+  </view>
+  <!-- 列表 -->
+  <view class="table">
+      <view class="weui-panel">
+        <view class="weui-panel__bd">
+          <view class="weui-media-box weui-media-box_small-appmsg">
+            <view class="weui-cells">
+              <view class="weui-cell "  wx:for="{{zb}}" wx:key="index">
+                <view class="weui-cell__hd number">{{index+1}}</view>
+                <view class="weui-cell__bd">
+                  <text class="equipment-name">{{item.name}}</text>
+                  <text class="sub-level">Lv{{item.lv}}</text>
+                </view>
+                <view class="weui-cell__ft">{{item.price}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    
+  </view>
+  <!-- 分页 -->
+  <view class="page-tool">
+    <text class="pre" data-type="pre" catchtap="pageChange">上一页</text>
+    <text class="page-number">{{page.current}}/{{page.total}}</text>
+    <text class="next" data-type="next" catchtap="pageChange">下一页</text>
+  </view>
+</view>

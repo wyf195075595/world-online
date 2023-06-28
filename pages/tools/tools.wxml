@@ -1,0 +1,19 @@
+<!--pages/tools/tools.wxml-->
+<view class="container">
+  <swiper class="my-swiper" indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image style="width: 100%; height: 100%;" src="{{item.src}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="tab-box">
+    <view class="box-item" wx:for="{{list}}" wx:key="index">
+      <view class="item-box">
+        <image src="{{item.icon}}"></image>
+        <text class="tab-title">{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>

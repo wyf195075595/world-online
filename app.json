@@ -1,0 +1,66 @@
+{
+  "pages":[
+    "pages/skill/skill",
+    "pages/equipment/equipment",
+    "pages/tools/tools",
+    "pages/team/team",
+    "pages/skillDetail/skillDetail",
+    "pages/skillSearchPage/skillSearchPage",
+    "pages/logs/logs"
+  ],
+  "lazyCodeLoading": "requiredComponents",
+  "entryPagePath": "pages/skill/skill",
+  "resolveAlias": {
+    "@/*": "/*",
+    "@assets/*": "assets/*",
+    "@utils/*": "utils/*"
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#F0F0F0"
+  },
+  "useExtendedLib":{
+    "weui": true
+  },
+  "usingComponents": {
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/skill/skill",
+        "text": "技能大全",
+        "iconPath": "/assets/images/skill.png",
+        "selectedIconPath": "/assets/images/skill.png"
+      },
+      {
+        "pagePath": "pages/team/team",
+        "text": "阵容搭配",
+        "iconPath": "/assets/images/team.png",
+        "selectedIconPath": "/assets/images/team.png"
+      },
+      {
+        "pagePath": "pages/tools/tools",
+        "text": "工具箱",
+        "iconPath": "/assets/images/tool.png",
+        "selectedIconPath": "/assets/images/tool.png"
+      },
+      {
+        "pagePath": "pages/equipment/equipment",
+        "text": "装备大全",
+        "iconPath": "/assets/images/equipment.png",
+        "selectedIconPath": "/assets/images/equipment.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

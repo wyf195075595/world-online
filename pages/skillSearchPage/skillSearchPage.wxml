@@ -1,0 +1,10 @@
+<!--pages/skillSearchPage/skillSearchPage.wxml-->
+<import src="/utils/template.wxml"></import>
+<view class="container">
+  <view class="search-result">搜索结果：xxx</view>
+  <view class="search-list">
+    <block wx:for="{{test}}"  wx:key="title">
+      <template is="activeSkill" data="{{...item}}"></template>
+    </block>
+  </view>
+</view>

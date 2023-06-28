@@ -1,0 +1,25 @@
+// 公共 template 模板
+<template name="tmp1">
+  <text>我是模板1</text>
+</template>
+<template name="tmp2">
+  <text>我是模板2</text>
+</template>
+<template name="activeSkill">
+  <view class="custom-pane" catchtap="tabTest" data-id="{{index}}">
+    <view class="pane-title">
+      <text class="main-title">{{name}}</text>
+      <text wx:if="{{special}}" class="tag top-tag">国家侠客技能所专属</text>
+      <text class="sub-title">22级</text>
+      <text class="sub-title">{{score}}分</text>
+    </view>
+    <view class="pane-content">
+      <view class="tags-box">
+        <text class="tag" wx:for="{{tags}}" wx:key="item">{{item}}</text>
+      </view>
+      <view class="disc-box">
+        <text class="disc" wx:for="{{discs}}" wx:key="item">{{item}}</text>
+      </view>
+    </view>
+  </view>
+</template>

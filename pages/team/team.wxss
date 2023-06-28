@@ -1,0 +1,75 @@
+/* pages/team/team.wxss */
+.container {
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.team-pane {
+  border-radius: 20rpx;
+  background: white;
+  margin-bottom: 20rpx;
+}
+.team-pane .team-top {
+  height: 60rpx;
+  display: flex;
+  align-items: flex-end;
+  /* justify-content: ; */
+}
+.team-pane .team-detail {
+  margin-left: auto;
+  margin-right: 10rpx;
+}
+.team-pane  .team-lv {
+  font-size: 36rpx;
+  margin:0 10rpx;
+}
+.team-pane .team-title {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.team-pane .team-disc {
+  font-size: 24rpx;
+  color: #858585;
+  margin-left: 10rpx;
+}
+.team-pane .content {
+  padding: 20rpx;
+  display: flex;
+  border-bottom: 2rpx dashed #DBDBDB;
+
+}
+.team-pane .img-box {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team-pane image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.team-pane .tags {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+.team-pane .tag {
+  width: fit-content;
+  padding:3rpx 8rpx;
+  height: 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  border-radius: 10%;
+  margin:5rpx 10rpx;
+  border: 2rpx solid #ABD1B0;
+}
+.team-pane .footer {
+  font-size: 24rpx;
+  font-weight: bold;
+  padding: 10rpx;
+}
+.team-pane .footer-disc:not(:first-child) {
+  margin-left: 20rpx;
+}

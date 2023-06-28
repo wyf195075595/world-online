@@ -1,0 +1,40 @@
+/* pages/equipment/equipment.wxss */
+.container {
+  display: grid;
+  grid-template-rows: 80rpx 80rpx auto 80rpx ;
+}
+
+.select-option {
+  color: white;
+}
+.table-tool {
+  background: slateblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.page-tool {
+  background: slategrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+.table {
+  background-color: snow;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.equipment-name {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #86379F;
+}
+.sub-level {
+  font-size: 24rpx;
+  margin-left: 10rpx;
+  color: #333;
+}
+.number {
+  width: 50rpx;
+}
